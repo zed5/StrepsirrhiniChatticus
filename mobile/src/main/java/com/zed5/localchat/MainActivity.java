@@ -20,10 +20,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+    private LocalChatConfig mLocalChatConfig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mLocalChatConfig = new LocalChatConfig(this);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Hello, world!", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Hello, " + mLocalChatConfig.getDisplayName() + "!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
