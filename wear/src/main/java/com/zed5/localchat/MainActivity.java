@@ -1,3 +1,12 @@
+/**
+ *  MIT License
+ *
+ *  SPDX:MIT
+ *
+ *  https://spdx.org/licenses/MIT
+ *
+ *  See LICENSE.txt file in the top level directory.
+ */
 package com.zed5.localchat;
 
 import android.os.Bundle;
